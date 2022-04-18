@@ -3,7 +3,7 @@ name: Python Pipeline
 on: push
 
 jobs:
-  build:
+  buildABC:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
