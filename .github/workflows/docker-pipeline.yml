@@ -2,7 +2,7 @@ name: Docker CI
 
 on:
   push:
-    branches: [ docker-pipeline ]
+    branches: [ main ]
 
 env:
   DOCKER_REGISTRY_HOST: fioneer.jfrog.io/fioneer-virtual
