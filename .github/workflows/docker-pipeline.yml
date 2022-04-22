@@ -1,0 +1,53 @@
+name: Docker CI
+
+on:
+  push:
+    branches: [ docker-pipeline ]
+
+env:
+  DOCKER_REGISTRY_HOST: fioneer.jfrog.io/fioneer-virtual
+  ARTIFACTORY_USERNAME: ${{ secrets.ARTIFACTORY_WRITE_USERNAME }}
+  ARTIFACTORY_PASSWORD: ${{ secrets.ARTIFACTORY_WRITE_PASSWORD }}
+  ARTIFACTORY_NPMRC: ${{ secrets.ARTIFACTORY_NPMRC }}
+  # CODACY_PROJECT_NAME: fioneer-starter-microservice
+  DOCKER_IMAGE_NAME: fioneer-starter/microservice
+  REPOSITORY_NAME: ${{ github.event.repository.name }}
+  PATH_TO_HELM_TEMPLATE: "./deployment/http-service-chart"
+  
+jobs:
+  lint-dockerfile:
+    runs-on: ubuntu-20.04
+    container:
+      image: fioneer.jfrog.io/fioneer-virtual/cicd/node-builder:v0.5.1
+      credentials:
+        username: ${{ secrets.ARTIFACTORY_READ_USERNAME }}
+        password: ${{ secrets.ARTIFACTORY_READ_PASSWORD }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Docker Login
+        run: docker-login
+      - name: Lint Dockerfile
+        run: docker run --rm -i "${DOCKER_REGISTRY_HOST}/hadolint/hadolint:v2.6.0-debian" < Dockerfile
+        
+build:
+    runs-on: ubuntu-20.04
+    needs:
+      - lint-dockerfile
+    container:
+      image: fioneer.jfrog.io/fioneer-virtual/cicd/container-builder:v2.1.1
+      credentials:
+        username: ${{ secrets.ARTIFACTORY_READ_USERNAME }}
+        password: ${{ secrets.ARTIFACTORY_READ_PASSWORD }}
+    env:
+      IMAGE_NAME: ${DOCKER_REGISTRY_HOST}/${DOCKER_IMAGE_NAME}:${GIT_BRANCH}-${GITHUB_SHA}
+      NPMRC: ${{ secrets.ARTIFACTORY_NPMRC }}
+      DOCKER_BUILD_SECRET_VARS: NPMRC
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - id: build
+        name: Docker Build
+        run: docker-build
+    outputs:
+      imageName: ${{ steps.build.outputs.imageName }}
