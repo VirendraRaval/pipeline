@@ -1,0 +1,19 @@
+name: Release Please
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  
+jobs:
+  release-please:
+    runs-on: ubuntu-20.04
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
+      tag_name: ${{ steps.release.outputs.tag_name }}
+    steps:
+      - uses: GoogleCloudPlatform/release-please-action@v2.32.0
+        id: release
+        with:
+          package-name: release-frontend
+          release-type: simple
