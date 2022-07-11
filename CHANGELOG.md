@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.1](https://www.github.com/VirendraRaval/pipeline/compare/v1.1.0...v1.1.1) (2022-07-11)
+
+
+### Bug Fixes
+
+* test patch release ([25ba8df](https://www.github.com/VirendraRaval/pipeline/commit/25ba8dfc0ac03e801bd9da435e440b770ad7be6b))
+
 ## [1.1.0](https://www.github.com/VirendraRaval/pipeline/compare/v1.0.0...v1.1.0) (2022-07-11)
 
 
