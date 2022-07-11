@@ -2,7 +2,6 @@ name: Release Please
 on:
   push:
     branches:
-      - prod
       - main
   workflow_dispatch:
   
@@ -18,7 +17,3 @@ jobs:
         with:
           package-name: release-frontend
           release-type: simple
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
