@@ -1,6 +1,13 @@
 # Changelog
 
 
+## [1.2.0](https://www.github.com/VirendraRaval/pipeline/compare/v1.1.1...v1.2.0) (2022-07-12)
+
+
+### Features
+
+* updated text ([e2ef676](https://www.github.com/VirendraRaval/pipeline/commit/e2ef676d7a399e4862cf0bca4b4f454476d59a81))
+
 ### [1.1.1](https://www.github.com/VirendraRaval/pipeline/compare/v1.1.0...v1.1.1) (2022-07-11)
 =======
 ## [2.0.0](https://www.github.com/VirendraRaval/pipeline/compare/v1.1.0...v2.0.0) (2022-07-11)
