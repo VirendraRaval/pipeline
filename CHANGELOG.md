@@ -1,6 +1,19 @@
 # Changelog
 
 
+## [1.3.0](https://www.github.com/VirendraRaval/pipeline/compare/v1.2.0...v1.3.0) (2022-07-13)
+
+
+### Features
+
+* updating for feature ([fe69a98](https://www.github.com/VirendraRaval/pipeline/commit/fe69a9874705f9cd01ebbb966accbd37d2f4d654))
+
+
+### Bug Fixes
+
+* updating for patch ([4a84069](https://www.github.com/VirendraRaval/pipeline/commit/4a840699cdbdbbbdf27eb6c7f46bfaec20fe2a46))
+* updating yet another patch ([daab9b7](https://www.github.com/VirendraRaval/pipeline/commit/daab9b73fb91a6731da2a1792a141757669fe073))
+
 ## [1.2.0](https://www.github.com/VirendraRaval/pipeline/compare/v1.1.1...v1.2.0) (2022-07-12)
 
 
