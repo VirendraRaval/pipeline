@@ -1,6 +1,18 @@
 # Changelog
 
 
+## [1.5.0](https://www.github.com/VirendraRaval/pipeline/compare/v1.4.0...v1.5.0) (2022-07-14)
+
+
+### Features
+
+* creating a feat ([ba540bf](https://www.github.com/VirendraRaval/pipeline/commit/ba540bf1378614ac629300b15dc52460c8caa8cb))
+
+
+### Bug Fixes
+
+* trying a fix after ([3b295b6](https://www.github.com/VirendraRaval/pipeline/commit/3b295b67321fda45a4567ce4bf1a8029493c3c5a))
+
 ## [1.4.0](https://www.github.com/VirendraRaval/pipeline/compare/v1.3.0...v1.4.0) (2022-07-14)
 
 
