@@ -6,3 +6,4 @@ creating without any conventional commit
 trying a release
 trying a feat
 trying a patch/feat
+multiple fixes
