@@ -1,0 +1,28 @@
+name: Know your container
+
+on: 
+   workflow_dispatch:
+
+jobs:
+  buildABC:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: quickly print hello world
+        run: echo hello, world!!
+      
+      - name: try more commands
+        run: |
+          echo What is in direcotry
+          ls -a
+          echo
+          echo Who am I
+          whoami
+          echo 
+          echo Java verion is
+          java -version
+          echo
+          echo Env variables are
+          env
+        
+  
