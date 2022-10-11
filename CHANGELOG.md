@@ -1,6 +1,14 @@
 # Changelog
 
 
+### [1.5.1](https://www.github.com/VirendraRaval/pipeline/compare/v1.5.0...v1.5.1) (2022-10-11)
+
+
+### Bug Fixes
+
+* update ([dfcfa74](https://www.github.com/VirendraRaval/pipeline/commit/dfcfa7416e6330a09805eab0f4bbd4e86eaa23f7))
+* update 4 ([907356b](https://www.github.com/VirendraRaval/pipeline/commit/907356b644222566390d3dcd81b70f63b32cc167))
+
 ## [1.5.0](https://www.github.com/VirendraRaval/pipeline/compare/v1.4.0...v1.5.0) (2022-07-14)
 
 
