@@ -24,5 +24,8 @@ jobs:
           echo
           echo Env variables are
           env
+          echo
+          echo docker version
+          docker -version
         
   
